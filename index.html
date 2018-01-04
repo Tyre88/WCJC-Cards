@@ -9,6 +9,10 @@
 </head>
 <body ng-app="wcjc">
     <div ng-controller="indexController as vm" class="container">
+        <div class="controls">
+            <input type="checkbox" ng-model="showTrainers" name="showTrainers" />
+            <label for="showTrainers">Visa tränare</label>
+        </div>
         <input type="file" name="xlfile" id="xlf" ng-show="!vm.Attendees.length">
 
         <div class="attendee" ng-repeat="attendee in vm.Attendees" ng-class="{'page-break': $index % 12 == 11}">
@@ -17,6 +21,10 @@
             <p>Namn: {{attendee.Name}} {{attendee.LastName}}</p>
             <p>Klubb: {{attendee.Club}}</p>
             <!--<p>Kod: <span ng-if="attendee.SleepOver"></span></p>-->
+            <div class="trainers" ng-show="showTrainers">
+                <span>Ole Bischof</span>
+                <span>Miryam Roper</span>
+            </div>
         </div>
     </div>
 </body>

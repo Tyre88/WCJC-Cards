@@ -50,9 +50,25 @@ h2
     height: 14px;
 }
 
+.trainers {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 12px;
+    width: calc(100% - 20px);
+    bottom: 10px;
+    left: 0;
+    font-family:'Kaushan Script', cursive;
+}
+
 @media print {
     .page-break
     {
         page-break-after: always;
+    }
+
+    .controls {
+        display: none;
     }
 }
