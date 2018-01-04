@@ -93,10 +93,10 @@
                             {
                                 currentObject.Club = worksheet[z].v;
                             }
-                            else if(z.indexOf('I') > -1)
-                            {
-                                currentObject.SleepOver = worksheet[z].v != 'Nej';
-                            }
+                            // else if(z.indexOf('I') > -1)
+                            // {
+                            //     currentObject.SleepOver = worksheet[z].v != 'Nej';
+                            // }
 
                         }
 
