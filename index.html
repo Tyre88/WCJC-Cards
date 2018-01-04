@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WCJC Cards</title>
+    <script src="bower_components/js-xlsx/dist/xlsx.core.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="wcjc">
+    <div ng-controller="indexController as vm" class="container">
+        <input type="file" name="xlfile" id="xlf" ng-show="!vm.Attendees.length">
+
+        <div class="attendee" ng-repeat="attendee in vm.Attendees" ng-class="{'page-break': $index % 9 == 8}">
+            <img src="logo.jpg" />
+            <h2>WCJC 2018</h2>
+            <p>Namn: {{attendee.Name}} {{attendee.LastName}}</p>
+            <p>Klubb: {{attendee.Club}}</p>
+            <p>Kod: <span ng-if="attendee.SleepOver"></span></p>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="styles.css"/>
+</html>
