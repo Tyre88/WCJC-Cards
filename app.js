@@ -89,14 +89,14 @@
                             else if(z.indexOf('B') > -1) {
                                 currentObject.LastName = worksheet[z].v;
                             }
-                            else if(z.indexOf('G') > -1)
+                            else if(z.indexOf('E') > -1)
                             {
                                 currentObject.Club = worksheet[z].v;
                             }
-                            // else if(z.indexOf('I') > -1)
-                            // {
-                            //     currentObject.SleepOver = worksheet[z].v != 'Nej';
-                            // }
+                            else if(z.indexOf('G') > -1)
+                            {
+                                currentObject.SleepOver = worksheet[z].v != 'Nej';
+                            }
 
                         }
 
